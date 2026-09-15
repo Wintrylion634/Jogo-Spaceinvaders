@@ -21,7 +21,7 @@ public class Missel {
 		this.x = x;
 		this.y = y;
 
-		ImageIcon referencia = new ImageIcon("res\\missel.png");
+		ImageIcon referencia = new ImageIcon(getClass().getResource("/imagens/missel.png"));
 		imagem = referencia.getImage();
 
 		this.largura = imagem.getWidth(null);
@@ -63,3 +63,4 @@ public class Missel {
 		return new Rectangle(x, y, largura, altura);
 	}	
 }
+

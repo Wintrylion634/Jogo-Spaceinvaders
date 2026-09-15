@@ -40,7 +40,7 @@ public class Fundo extends JPanel implements ActionListener {
         setDoubleBuffered(true);
         addKeyListener(new TecladoAdapter());
 
-        ImageIcon referencia = new ImageIcon("res\\fundo.png");
+        ImageIcon referencia = new ImageIcon(getClass().getResource("/imagens/fundo.png"));
         fundo = referencia.getImage();
         nave = new Nave();
 
@@ -61,8 +61,10 @@ public class Fundo extends JPanel implements ActionListener {
         }
     }
 
-    public void paint(Graphics g) {
-        Graphics2D graficos = (Graphics2D) g;
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Graphics2D graficos = (Graphics2D) g.create();
         graficos.drawImage(fundo, 0, 0, null);
         if (Vivo) {
             graficos.drawImage(nave.getImagem(), nave.getX(), nave.getY(), this);
@@ -86,13 +88,13 @@ public class Fundo extends JPanel implements ActionListener {
             
         } else {
 			
-	ImageIcon fimJogo = new ImageIcon("res\\game_over.jpg");
+	ImageIcon fimJogo = new ImageIcon(getClass().getResource("/imagens/game_over.jpg"));
 			
 	graficos.drawImage(fimJogo.getImage(), 0, 0, null);
             
           
         }
-        g.dispose();
+        graficos.dispose();
     }
 
     @Override
@@ -189,3 +191,4 @@ public class Fundo extends JPanel implements ActionListener {
         }
     }
 }
+

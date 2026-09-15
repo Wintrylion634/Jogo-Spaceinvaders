@@ -61,14 +61,8 @@ public class menu extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
-        add(new Fundo());
-        setTitle("Jogo de LP");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(500, 400);
-        setLocationRelativeTo(null);
-        setResizable(false);
-        setVisible(true);
         new Janela();
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -111,3 +105,4 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
+

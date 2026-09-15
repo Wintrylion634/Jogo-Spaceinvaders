@@ -21,7 +21,7 @@ public class Nave {
 	
 	public Nave(){
 		
-		ImageIcon referencia = new ImageIcon("res\\nave.gif");
+		ImageIcon referencia = new ImageIcon(getClass().getResource("/imagens/nave.gif"));
 		imagem = referencia.getImage();
 		
 		altura = imagem.getHeight(null);
@@ -138,3 +138,4 @@ public class Nave {
 		
 	}		
 }
+
